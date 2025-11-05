@@ -11,11 +11,11 @@ import os
 import re
 
 # ================== CONFIGURE GEMINI ==================
-CLIENT = genai.Client(api_key="AIzaSyCNqJnz_vKvbIhW54sZju56ls18XR7TBV0")  # Replace with your Gemini API key
+CLIENT = genai.Client(api_key="")  # Replace with your Gemini API key
 
 # ================== CONFIGURE ELEVENLABS ==================
-ELEVENLABS_API_KEY = "sk_8729e7008ae87f322a44bb549529acad86c6953557c9a472"  # Replace with your ElevenLabs API key
-VOICE_ID = "8PfKHL4nZToWC3pbz9U9"               # Female/anime-style voice
+ELEVENLABS_API_KEY = ""  # Replace with your ElevenLabs API key
+VOICE_ID = "8PfKHL4nZToWC3pbz9U9"               # Female  voice
 eleven = ElevenLabs(api_key=ELEVENLABS_API_KEY)
 
 listener = sr.Recognizer()
@@ -136,3 +136,4 @@ if __name__ == "__main__":
                 cont = take_command(timeout=7)
                 if any(word in cont for word in ["ok", "okay", "hey"]):
                     break
+
